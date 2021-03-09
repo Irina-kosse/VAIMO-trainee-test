@@ -79,7 +79,7 @@ body{
     margin: 0 auto;
 }
 .wrapper_menu{
-    max-width : 640px;
+    max-width : 700px;
     margin: auto;
 }
 /*Header styles start*/
@@ -103,6 +103,7 @@ body{
     line-height: 18px;
     text-align: center;
     letter-spacing: 0.8px;
+    margin-top: 4px;
 }
 .info:last-child{
     margin-right: 24px;
@@ -112,6 +113,7 @@ body{
     /* identical to box height */
     text-align: right;
     letter-spacing: 0.0833333px;
+    margin-top: 4px;
 }
 .topbar-icon{
     margin-right: 6px;
@@ -143,11 +145,14 @@ body{
     left: 0;
     width : 100%;
     height: 298px;
-    background: url(../imgs/bg1663.png) no-repeat center;
+    background: white;
     background-size: cover;
     max-height: 165px;
 }
+.header:focus, .header:hover, header:active{
 
+    background: white;
+}
 .sing-in{
     font-weight: 600;
     font-size: 11px;
@@ -156,7 +161,7 @@ body{
     /* identical to box height */
     text-align: right;
     letter-spacing: 1px;
-    color: #FFFFFF;
+    color: black;
     text-decoration: none;
     margin-top: 0;
     margin-right: 7px;
@@ -166,16 +171,24 @@ body{
     margin-right: 10px;
 }
 .login {
-    color: white;
+    color: black;
 }
 .basket-button{
-    background: url("../imgs/basket.png");
+    background: url("../img/basket.png");
     width: 18px;
     height: 24px;
-    margin-right: 24px;
+    margin-right: 7px;
     border: none;
 }
-
+.basket-quantity{
+    background-color: yellow;
+    color: black;
+    height: 18px;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 24px;
+    font-size: 11px;
+}
 .header-nav{
 
     margin: auto;
@@ -186,6 +199,7 @@ body{
 }
 .header-item{
     margin-right: 40px;
+    font-weight: 600;
 }
 .header-item:last-child{
     margin-right: 0;
@@ -193,11 +207,11 @@ body{
 .header-link{
     font-size: 13px;
     line-height: 19px;
-    color: #FFFFFF;
+    color: black;
     text-decoration: none;
 }
 .header-link:hover, .header-link:focus, .header-link:active{
-    color: black;
+    opacity: 70%;
 }
 
 /*Header styles end*/
@@ -205,7 +219,8 @@ body{
 .intro{
     height: 100vh;
     margin-top: 0;
-    background: url(../imgs/intro-bg.jpg) no-repeat center;
+    background: url(../img/hp-oh-hi1.png) no-repeat center;
+
     background-size: cover;
 }
 
@@ -216,7 +231,7 @@ body{
     padding-top: 443px;
     /* identical to box height */
     text-align: center;
-    color: #FFFFFF;
+    color: white;
 }
 
 /*Intro styles end*/
@@ -230,7 +245,6 @@ body{
 .search-form{
     margin-right: 150px;
     background-color: white;
-    opacity: 75%;
     padding-top: 48px;
 }
 .search-form_info{
@@ -247,36 +261,43 @@ body{
     height: 48px;
     outline: none;
     color: black;
-    background-color: rgba(247, 247, 247, 0.25);
-    border: none;
+    background-color: #F7F7F7;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
-}
-
-.searchTerm:focus{
-    color: white;
-    background-color: rgba(201, 167, 144, 0.33);
-    opacity: 65%;
+    border: none;
 }
 ::placeholder{
-    color: white;
+    color: black;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
 }
+.searchTerm:focus{
+    color: white;
+    background-color: rgba(201, 167, 144, 0.33);
+
+}
+
 .searchButton {
     width: 40px;
     height: 48px;
-    background-color: rgba(247, 247, 247, 0.25);
-    background: url(../imgs/Fill.png) no-repeat cover;
+    display: flex;
+    padding-top: 10px;
     text-align: center;
     color: black;
-    border: none;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 20px;
+    border: none;
 }
-
+.header_search_pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
 .searchButton:focus {
     color: white;
     background-color: rgba(201, 167, 144, 0.33);
@@ -291,37 +312,45 @@ body{
     right: 30%;
     transform: translate(-50%, -50%);
 }
-.fotter{
+.footer{
     color: black;
     flex: 0 0 auto;
+    background-color: #FFFFFF;
 }
 .footer_media{
     width: 100%;
     max-height: 16px;
-    background-color: white;
     padding-top:32px ;
     font-size: 14px;
+    top: 800px;
+    position: absolute;
+    background-color: #FFFFFF;
+    height: calc(100% - 800px);
 }
+
 .footer_media_inside{
     line-height: 18px;
-    width: 460px;
+    width: 100%;
     margin: 0 auto;
+    background-color: #FFFFFF;
 }
 .footer-main{
     letter-spacing: 0.872727px;
     color: #000000;
     text-align: center;
-    height: 36px;
+    height: 75px;
     max-width: 400px;
+    margin-left: 35%;
 }
 .register {
     width: 51%;
     position: relative;
     display: flex;
-    top: 28px;
+    top: 0;
     left: 35%;
     border: none;
     margin-bottom: 56px;
+    background-color: #FFFFFF;
 }
 
 .registerTerm {
@@ -358,6 +387,10 @@ body{
     color: black;
     background-color: white;
 }
+.footer{
+    background-color: #FFFFFF;
+}
+
 .footer_copyright{
     width: 100%;
     font-weight: normal;
@@ -371,13 +404,13 @@ body{
     margin-top: 38px;
 }
 .basement{
-    width: 900px;
     text-align: left;
     display: block;
     height:60px;
     background-color:#FFFFFF;
-    width:calc( ( 100%  ) / 5 );
+    width:calc(  100%   / 5 );
     margin:0 0 20px;
+
 }
 .basement-list{
     font-weight: normal;
@@ -405,9 +438,13 @@ body{
     letter-spacing: 1.16364px;
     text-decoration: none;
     color: black;
+
 }
 .basement-header{
     margin-bottom: 17px;
+}
+.basement-social{
+    text-decoration: none;
 }
 .flex{
     display:flex;
