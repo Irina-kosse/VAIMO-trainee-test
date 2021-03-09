@@ -59,6 +59,7 @@
 
 html{
     box-sizing: border-box;
+    max-width: 360px;
 }
 *, *::before, *::after{
     box-sizing: inherit;
@@ -69,7 +70,9 @@ body{
     font-size: 16px;
     line-height: 1.2;
     font-weight: normal;
-
+    max-width: 360px;
+    background: url(../imgs/IMG.png) no-repeat ;
+    background-size: cover;
 }
 . main{
     color: #FFFFFF;
@@ -79,77 +82,45 @@ body{
     margin: 0 auto;
 }
 .wrapper_menu{
-    max-width : 700px;
+    max-width : 360px;
     margin: auto;
 }
 /*Header styles start*/
 
-.topbar{
-    width: 100%;
-    background-color: white;
-    text-decoration: none;
-    margin-top: 0;
-    position: relative;
-    color: black;
-    display:flex;
-    flex-wrap:wrap;
+.header_logo{
+    margin-top: 20px;
 }
-
-.info:first-child{
-    margin-left: 45%;
-    margin-right: auto;
-    font-weight: 500;
-    font-size: 11.5px;
-    line-height: 18px;
-    text-align: center;
-    letter-spacing: 0.8px;
-    margin-top: 4px;
-}
-.info:last-child{
-    margin-right: 24px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    /* identical to box height */
-    text-align: right;
-    letter-spacing: 0.0833333px;
-    margin-top: 4px;
-}
-.topbar-icon{
-    margin-right: 6px;
-}
-.inner {
-    position: absolute;
-    top: 50%;
+.header_logo-link{
+    margin-left: 58px;
 }
 .header-wrapper{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-    padding-top: 40px;
-    margin-bottom: 24px;
 }
 
-.header_logo{
-    max-width: 145px;
-    margin-top: 0;
-    margin-left: 24px;
-
-}
-.header_search_pic{
-    opacity: 100%;
-}
 .header{
-    position: fixed;
+    position: absolute;
     left: 0;
+    top: 0;
     width : 100%;
-    height: 298px;
-    background: transparent;
+    height: 72px;
+    background: url("../imgs/bg_.png");
     background-size: cover;
-    max-height: 165px;
+    max-height: 72px;
+    max-width: 360px;
 }
 
+.menu-button{
+    border: none;
+    background-color: transparent;
+    background: url("../imgs/menu burger.png");
+    width: 20px;
+    height: 15px;
+    margin-left: 16px;
+    position: relative;
+}
 .sing-in{
     font-weight: 600;
     font-size: 11px;
@@ -158,57 +129,32 @@ body{
     /* identical to box height */
     text-align: right;
     letter-spacing: 1px;
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     margin-top: 0;
     margin-right: 7px;
     margin-left: 7px;
 }
-.sing-in:last-child{
-    margin-right: 10px;
-}
+
 .login {
     color: white;
 }
 .basket-button{
-    background: url("../img/basket.png");
+    background: url("../imgs/basket.png");
     width: 18px;
     height: 24px;
     margin-right: 7px;
     border: none;
+    top:20px;
 }
+
 .basket-quantity{
-    background-color: yellow;
+    background: url("../imgs/oval.png") no-repeat;
     color: black;
     height: 18px;
     border: none;
-    border-radius: 5px 5px 5px 5px;
-    margin-right: 24px;
+    margin-right: 16px;
     font-size: 11px;
-}
-.header-nav{
-
-    margin: auto;
-}
-.header-list{
-    display: flex;
-    flex-wrap: wrap;
-}
-.header-item{
-    margin-right: 40px;
-    font-weight: 600;
-}
-.header-item:last-child{
-    margin-right: 0;
-}
-.header-link{
-    font-size: 13px;
-    line-height: 19px;
-    color: white;
-    text-decoration: none;
-}
-.header-link:hover, .header-link:focus, .header-link:active{
-    opacity: 70%;
 }
 
 /*Header styles end*/
@@ -216,8 +162,8 @@ body{
 .intro{
     height: 100vh;
     margin-top: 0;
-    background: url(../img/hp-oh-hi1.png) no-repeat center;
-    background-size: cover;
+
+
 }
 
 .intro_title{
@@ -227,7 +173,7 @@ body{
     padding-top: 443px;
     /* identical to box height */
     text-align: center;
-    color: white;
+    color: #FFFFFF;
 }
 
 /*Intro styles end*/
@@ -238,65 +184,26 @@ body{
     top: 48px;
 }
 
-.search-form{
-    margin-right: 150px;
-    background-color: white;
-    padding-top: 48px;
-    opacity: 50%;
-}
-.search-form_info{
-    display: flex;
-    flex-wrap: wrap;
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 16px;
-}
 
-.searchTerm {
-    width: 600px;
-    padding: 16px;
-    height: 48px;
-    outline: none;
-    color: white;
-    background-color: rgba(247, 247, 247, 0.25);
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-
-}
 ::placeholder{
     color: white;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
 }
-
-
 .searchButton {
-    width: 40px;
-    height: 48px;
-    opacity: 100%;
-    display: flex;
-    padding-top: 10px;
+    width: 18px;
+    height: 18px;
+    background: url("../imgs/Fill.png");
+    background-position: center;
     text-align: center;
     color: black;
-    border-radius: 0 5px 5px 0;
+    border: none;
     cursor: pointer;
     font-size: 20px;
-    background-color: rgba(247, 247, 247, 0.25);
+    margin-left: 16px;
 }
-.header_search_pic{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-}
-.searchButton:focus {
-    color: white;
-    background-color: rgba(247, 247, 247, 0.33);
-    opacity: 65%;
-}
+
 /*Resize the wrap to see the search bar change!*/
 .wrap{
     width: 100%;
@@ -309,46 +216,42 @@ body{
 .footer{
     color: black;
     flex: 0 0 auto;
+    top: 480px;
     background-color: #FFFFFF;
 }
 .footer_media{
-    width: 100%;
+    width: 360px;
     max-height: 16px;
-    padding-top:32px ;
-    font-size: 14px;
-    top: 800px;
+    background-color: white;
+    top: 480px;
     position: absolute;
-    background-color: #FFFFFF;
-    height: calc(100% - 800px);
+    font-size: 14px;
 }
-
 .footer_media_inside{
     line-height: 18px;
-    width: 100%;
+    width: 328px;
     margin: 0 auto;
-    background-color: #FFFFFF;
 }
 .footer-main{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
     letter-spacing: 0.872727px;
-    color: #000000;
-    text-align: center;
-    height: 75px;
-    max-width: 400px;
-    margin-left: 35%;
 }
 .register {
-    width: 51%;
+    width: 91%;
     position: relative;
     display: flex;
-    top: 0;
-    left: 35%;
+    top: 19px;
+    left: 4.4%;
     border: none;
     margin-bottom: 56px;
-    background-color: #FFFFFF;
 }
-
+::placeholder{
+    color: black;
+}
 .registerTerm {
-    width: 40%;
     padding: 16px;
     height: 32px;
     outline: none;
@@ -367,8 +270,8 @@ body{
 }
 
 .registerButton {
-    width: 15%;
-    height: 35px;
+    width: 96px;
+    height: 32px;
     background: black;
     text-align: center;
     color: white;
@@ -381,10 +284,6 @@ body{
     color: black;
     background-color: white;
 }
-.footer{
-    background-color: #FFFFFF;
-}
-
 .footer_copyright{
     width: 100%;
     font-weight: normal;
@@ -399,11 +298,13 @@ body{
 }
 .basement{
     text-align: left;
-    display: block;
-    height:60px;
+    display: flex;
+    justify-content: space-between;
     background-color:#FFFFFF;
-    width:calc(  100%   / 5 );
-    margin:0 0 20px;
+    width: 100%;
+    margin-left: 16px;
+    padding: 16px;
+    height: 32px;
 }
 .basement-list{
     font-weight: normal;
@@ -413,15 +314,7 @@ body{
     /* identical to box height, or 158% */
     letter-spacing: 0.1px;
 }
-.basement-item{
-    color: black;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 19px;
-    text-decoration: none;
-}
+
 .basement-link{
     font-family: Cormorant Garamond;
     font-style: normal;
@@ -434,14 +327,23 @@ body{
 }
 .basement-header{
     margin-bottom: 17px;
+
 }
+.basement-social{
+    text-decoration: none;
+}
+.arrow{
+    border: none;
+}
+
 .flex{
     display:flex;
     flex-wrap:wrap;
     margin: auto;
     max-width: 100%;
-    margin-left: 25%;
+    margin-left: 88px;
     margin-right: 15%;
+    margin-top: 24px;
 }
 .basement-icon{
     margin-right: 16px;
